@@ -6,6 +6,14 @@ execute if score Starts: manhunt_display matches 1.. run clear @a[team=hunters] 
 #Give runners compass
 execute as @a[team=hunters] unless items entity @s inventory.* minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] unless items entity @s hotbar.* minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] unless items entity @s weapon.offhand minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] unless items entity @s player.crafting.* minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] unless items entity @s player.cursor minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] run give @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
 
+#check compass count
+# 1. Count how many trackers the player has and store it in the scoreboard
+execute as @a[team=hunters] store result score @s tracker_count run clear @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] 0
+
+# 2. If they have 2 or more, clear ALL trackers and give them exactly 1 back
+execute as @a[team=hunters,scores={tracker_count=2..}] run clear @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
+execute as @a[team=hunters,scores={tracker_count=2..}] run give @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
+
 function manhunt:grab_position
 
 execute as @a[team=hunters] at @s if predicate manhunt:in_overworld run function manhunt:update_compass_overworld

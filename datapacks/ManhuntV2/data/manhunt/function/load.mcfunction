@@ -40,4 +40,6 @@ execute unless score Temp manhunt_prev matches -2147483647.. run function manhun
 
 scoreboard objectives add lobby trigger
 
+scoreboard objectives add tracker_count dummy
+
 tellraw @a {"text":"Manhunt (1.17.x, 1.18.x, 1.19.x, 1.20.x, 1.21.x 26.1.x, 26.2.x)-16 Loaded","bold":true,"color":"gold"}
