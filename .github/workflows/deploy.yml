@@ -1,0 +1,23 @@
+name: Deploy to PebbleHost
+on:
+  push:
+    branches:
+      - main  # Can change to current branch
+
+jobs:
+  web-deploy:
+    name: Sync Files
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+    
+    - name: Sync FTP Folder
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5 #amazing program
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        port: 22  # 21 for FTP, and 22 if using SFTP
+        local-dir: ./  # Folder in your Git repo
+        server-dir: /world/datapacks  # Target folder on PebbleHost
