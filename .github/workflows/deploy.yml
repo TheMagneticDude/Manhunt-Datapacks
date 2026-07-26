@@ -19,5 +19,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PWD }}
         port: 22  # 21 for FTP, and 22 if using SFTP
-        local-dir: ./datapacks  # Folder in Git repo
-        server-dir: /world/datapacks  # Target folder on PebbleHost
+        local-dir: ./datapacks/  # Folder in Git repo
+        server-dir: /world/datapacks/  # Target folder on PebbleHost
