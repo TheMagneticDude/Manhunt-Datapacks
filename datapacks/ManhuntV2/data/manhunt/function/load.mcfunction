@@ -34,6 +34,7 @@ execute unless score Temp manhunt_lead matches -2147483647.. run scoreboard play
 
 team add hunters "hunters"
 team add runners "runners"
+team add dead "dead"
 
 scoreboard objectives add manhunt_prev dummy
 execute unless score Temp manhunt_prev matches -2147483647.. run function manhunt:first_load

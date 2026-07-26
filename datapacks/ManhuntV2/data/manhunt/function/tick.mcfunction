@@ -10,3 +10,11 @@ execute if score Starts: manhunt_display matches 1.. run clear @a[team=hunters]
 
 #check triggers
 function manhunt:check_trigger
+
+
+#player tag
+tag @a[team=runners,team=hunters,team=dead,tag=ManhuntPlayer]
+tag @a[team=!runners,team=!hunters,team=!dead,tag=ManhuntPlayer] remove ManhuntPlayer
+
+#set dead runners to spectator even upon rejoin
+gamemode spectator @a[team=dead,gamemode=!spectator]
