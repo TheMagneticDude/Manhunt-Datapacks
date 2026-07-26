@@ -1,0 +1,34 @@
+scoreboard players reset @a manhunt_x_o
+scoreboard players reset @a manhunt_y_o
+scoreboard players reset @a manhunt_z_o
+
+scoreboard players reset @a manhunt_x_n
+scoreboard players reset @a manhunt_y_n
+scoreboard players reset @a manhunt_z_n
+
+
+tag @e remove manhunt_died
+tag @e remove manhunt_previous
+
+tag @e remove manhunt_true_runner
+tag @e remove manhunt_fake_runner
+execute as @e[team=runners] run tag @s add manhunt_true_runner
+
+scoreboard players set Temp manhunt_p_left 0
+execute as @a[team=runners] run scoreboard players add Temp manhunt_p_left 1
+
+scoreboard players set Temp manhunt_enabled 1
+scoreboard players set Temp manhunt_end 10
+
+gamemode survival @a
+gamerule pvp true
+
+function manhunt:player_reset
+
+scoreboard players operation Starts: manhunt_display = Temp manhunt_lead
+scoreboard objectives setdisplay sidebar manhunt_display
+
+
+
+#setup trigger function
+function manhunt:setup
