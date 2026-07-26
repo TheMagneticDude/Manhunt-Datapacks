@@ -1,5 +1,8 @@
 scoreboard objectives setdisplay sidebar
 
+#allow hunters to jump
+execute as @a[team=hunters] run attribute @s minecraft:jump_strength base reset
+
 #To show now tracking
 scoreboard players reset @a manhunt_tid
 
