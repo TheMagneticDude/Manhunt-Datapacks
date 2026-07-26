@@ -21,7 +21,7 @@ scoreboard players set Temp manhunt_enabled 1
 scoreboard players set Temp manhunt_end 10
 
 gamemode survival @a
-gamerule pvp true
+
 
 function manhunt:player_reset
 

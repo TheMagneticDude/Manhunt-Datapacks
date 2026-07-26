@@ -5,7 +5,7 @@ scoreboard players set Temp manhunt_enabled 0
 scoreboard players set Starts: manhunt_display 0
 
 execute in minecraft:overworld run tp @a 9.5 -28 6.6
-gamerule pvp false
+
 gamemode adventure @a
 
 function manhunt:player_reset
