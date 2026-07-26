@@ -18,7 +18,7 @@ tag @a[team=hunters,tag=!ManhuntPlayer] add ManhuntPlayer
 tag @a[team=dead,tag=!ManhuntPlayer] add ManhuntPlayer
 
 #remove tag from players that arent on the teams
-execute unless entity @a[team=runners] run execute unless entity @a[team=hunters] run execute unless entity @a[team=dead] run tag @s remove ManhuntPlayer
+execute as @a run execute unless entity @a[team=runners] run execute unless entity @a[team=hunters] run execute unless entity @a[team=dead] run tag @s remove ManhuntPlayer
 
 #set dead runners to spectator even upon rejoin
 gamemode spectator @a[team=dead,gamemode=!spectator]
