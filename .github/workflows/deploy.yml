@@ -4,20 +4,22 @@ on:
     branches:
       - main  # Can change to current branch
 
+
 jobs:
-  web-deploy:
-    name: Sync Files
+  sftp-deploy:
+    name: Sync Files via SFTP
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
       uses: actions/checkout@v4
     
-    - name: Sync FTP Folder
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5 #amazing program
+    - name: Sync SFTP Folder
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.6
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PWD }}
-        port: 22  # 21 for FTP, and 22 if using SFTP
-        local-dir: ./datapacks/  # Folder in Git repo
-        server-dir: /world/datapacks/  # Target folder on PebbleHost
+        port: 2222  # pebblehost port
+        local_path: './datapacks/'  #Grab only datapacks folder
+        remote_path: '/world/datapacks'  # Target folder on PebbleHost
+        sftp_only: true
