@@ -4,7 +4,7 @@ execute as @e[team=runners] unless score @s manhunt_rid matches -2147483647.. ru
 execute if score Starts: manhunt_display matches 1.. run clear @a[team=hunters] minecraft:compass
 
 #Give runners compass
-execute as @a[team=hunters] unless items entity @s inventory.* minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] unless items entity @s hotbar.* minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] run give @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
+execute as @a[team=hunters] unless items entity @s inventory.* minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] unless items entity @s hotbar.* minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] unless items entity @s weapon.offhand minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}] run give @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
 
 function manhunt:grab_position
 
