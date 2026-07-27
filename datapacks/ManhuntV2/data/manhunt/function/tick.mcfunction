@@ -25,4 +25,4 @@ gamemode spectator @a[team=dead,gamemode=!spectator]
 
 #lead timer value 
 #read scoreboard lead value and store into macro
-execute store result storage manhunt:vars LeadTime int 1 run scoreboard players get Temp manhunt_lead
+#execute store result storage manhunt:vars LeadTime int 1 run scoreboard players get Temp manhunt_lead
