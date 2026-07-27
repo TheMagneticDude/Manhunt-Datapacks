@@ -14,6 +14,9 @@ execute as @a[team=hunters] store result score @s tracker_count run clear @s min
 execute as @a[team=hunters,scores={tracker_count=2..}] run clear @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
 execute as @a[team=hunters,scores={tracker_count=2..}] run give @s minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
 
+# 3. Kill all dropped compass items
+kill @e[type=minecraft:item,nbt={Item:{components:{"minecraft:custom_data":{Manhunt_tracker:1b}}}}]
+
 function manhunt:grab_position
 
 execute as @a[team=hunters] at @s if predicate manhunt:in_overworld run function manhunt:update_compass_overworld
