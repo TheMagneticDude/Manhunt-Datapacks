@@ -4,6 +4,7 @@ scoreboard objectives setdisplay sidebar
 execute as @a[team=hunters] run attribute @s minecraft:jump_strength base reset
 execute as @a[team=hunters] run attribute @s minecraft:movement_speed base reset
 execute as @a[team=hunters] run attribute @s minecraft:block_break_speed base reset
+execute as @a[team=hunters] run attribute @s minecraft:knockback_resistance base reset
 
 #To show now tracking
 scoreboard players reset @a manhunt_tid
