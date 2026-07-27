@@ -22,3 +22,7 @@ execute as @a run execute unless entity @a[team=runners] run execute unless enti
 
 #set dead runners to spectator even upon rejoin
 gamemode spectator @a[team=dead,gamemode=!spectator]
+
+#lead timer value 
+#read scoreboard lead value and store into macro
+execute store result storage manhunt:vars LeadTime int 1 run scoreboard players get Temp manhunt_lead
