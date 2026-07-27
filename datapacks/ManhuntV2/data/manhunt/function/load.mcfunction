@@ -27,6 +27,10 @@ scoreboard objectives add manhunt_x_n dummy
 scoreboard objectives add manhunt_y_n dummy
 scoreboard objectives add manhunt_z_n dummy
 
+scoreboard objectives add manhunt_x_e dummy
+scoreboard objectives add manhunt_y_e dummy
+scoreboard objectives add manhunt_z_e dummy
+
 scoreboard objectives add manhunt_dst dummy
 scoreboard objectives add manhunt_min_dst dummy
 
