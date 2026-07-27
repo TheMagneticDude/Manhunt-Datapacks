@@ -31,9 +31,9 @@ execute store result storage manhunt:compass_data X int 1 run scoreboard players
 execute store result storage manhunt:compass_data Y int 1 run scoreboard players get @e[tag=manhunt_closest,limit=1] manhunt_y_e
 execute store result storage manhunt:compass_data Z int 1 run scoreboard players get @e[tag=manhunt_closest,limit=1] manhunt_z_e
 
-#Cludge to handle not been in nether yet
-execute if score @e[tag=manhunt_closest,limit=1] manhunt_x_e matches 0 if score @e[tag=manhunt_closest,limit=1] manhunt_y_e matches 0 if score @e[tag=manhunt_closest,limit=1] manhunt_z_e matches 0 run function manhunt:not_in_nether
-execute unless score @e[tag=manhunt_closest,limit=1] manhunt_x_e matches 0 unless score @e[tag=manhunt_closest,limit=1] manhunt_y_e matches 0 unless score @e[tag=manhunt_closest,limit=1] manhunt_z_e matches 0 run tag @s remove manhunt_not_in_nether
+#Cludge to handle not been in end yet
+execute if score @e[tag=manhunt_closest,limit=1] manhunt_x_e matches 0 if score @e[tag=manhunt_closest,limit=1] manhunt_y_e matches 0 if score @e[tag=manhunt_closest,limit=1] manhunt_z_e matches 0 run function manhunt:not_in_end
+execute unless score @e[tag=manhunt_closest,limit=1] manhunt_x_e matches 0 unless score @e[tag=manhunt_closest,limit=1] manhunt_y_e matches 0 unless score @e[tag=manhunt_closest,limit=1] manhunt_z_e matches 0 run tag @s remove manhunt_not_in_end
 
 
 #Should we set to nearest (1) or make it go mad (0)
@@ -42,7 +42,7 @@ scoreboard players set Temp reg_1 0
 execute unless score Temp manhunt_min_dst matches -2147483647.. run scoreboard players set Temp reg_1 1
 execute if score Temp manhunt_min_dst matches -2147483647.. if score Temp manhunt_dst >= Temp manhunt_min_dst run scoreboard players set Temp reg_1 1
 
-execute if score Temp reg_1 matches 1 run function manhunt:set_compass_nether with storage manhunt:compass_data
+execute if score Temp reg_1 matches 1 run function manhunt:set_compass_end with storage manhunt:compass_data
 execute if score Temp reg_1 matches 0 run function manhunt:go_mad
 
 tag @s remove tracker_temp
