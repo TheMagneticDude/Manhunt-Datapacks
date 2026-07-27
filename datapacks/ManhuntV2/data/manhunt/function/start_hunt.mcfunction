@@ -14,4 +14,4 @@ scoreboard players set Temp manhunt_enabled 2
 
 #clear resistance
 effect clear @a[tag=ManhuntPlayer] minecraft:resistance
-time set day
+execute in minecraft:manhunt run time set day
