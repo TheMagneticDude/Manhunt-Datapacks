@@ -27,4 +27,5 @@ gamemode spectator @a[team=dead,gamemode=!spectator]
 #read scoreboard lead value and store into macro
 #execute store result storage manhunt:vars LeadTime int 1 run scoreboard players get Temp manhunt_lead
 
-execute as @a in minecraft:manhunt run gamemode survival
+execute as @a[team=hunters] in minecraft:manhunt run gamemode survival
+execute as @a[team=runners] in minecraft:manhunt run gamemode survival
