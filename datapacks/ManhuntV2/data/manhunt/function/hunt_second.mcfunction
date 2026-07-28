@@ -32,3 +32,9 @@ execute if score Temp manhunt_p_left matches ..0 unless entity @e[team=runners,t
 #Game over detection (dragon death)
 execute in minecraft:manhunt_the_end as @a[predicate=manhunt:in_end] if score Temp manhunt_end matches 1.. run scoreboard players remove Temp manhunt_end 1
 execute if score Temp manhunt_end matches 0 unless entity @e[type=minecraft:ender_dragon] run function manhunt:dragon_death
+
+#reset hunters attributes in case of disconnect
+execute as @a[team=hunters] run attribute @s minecraft:jump_strength base reset
+execute as @a[team=hunters] run attribute @s minecraft:movement_speed base reset
+execute as @a[team=hunters] run attribute @s minecraft:block_break_speed base reset
+execute as @a[team=hunters] run attribute @s minecraft:knockback_resistance base reset
