@@ -10,7 +10,12 @@ execute as @a[team=hunters] run attribute @s minecraft:knockback_resistance base
 
 
 #start only when runner has moved 
-execute as @a[scores={walk=1..},team=runners] run say I HAVE MOVED
 execute as @a[scores={walk=1..},team=runners] run function manhunt:start_hunt
 scoreboard players set @a[scores={walk=1..}] walk 0
+
+execute as @a[scores={sprint=1..},team=runners] run function manhunt:start_hunt
+scoreboard players set @a[scores={sprint=1..}] sprint 0
+
+execute as @a[scores={crouch=1..},team=runners] run function manhunt:start_hunt
+scoreboard players set @a[scores={crouch=1..}] crouch 0
 

@@ -35,6 +35,10 @@ team modify runners collisionRule never
 
 #reset walk scores
 scoreboard players set @a[scores={walk=1..}] walk 0
+scoreboard players set @a[scores={sprint=1..}] sprint 0
+scoreboard players set @a[scores={crouch=1..}] crouch 0
+
+
 
 scoreboard players set Temp manhunt_enabled 3
 scoreboard players set Temp manhunt_end 10
