@@ -19,6 +19,7 @@ execute as @e[team=runners] run tag @s add manhunt_true_runner
 scoreboard players set Temp manhunt_p_left 0
 execute as @a[team=runners] run scoreboard players add Temp manhunt_p_left 1
 
+scoreboard players set Temp manhunt_enabled 3
 scoreboard players set Temp manhunt_end 10
 
 gamemode survival @a[team=runners]
@@ -28,6 +29,5 @@ gamemode survival @a[team=hunters]
 function manhunt:player_reset
 
 
-#start only when runner has moved 
-execute as @a[scores={moved=1..}] run say I have moved!
+
 
