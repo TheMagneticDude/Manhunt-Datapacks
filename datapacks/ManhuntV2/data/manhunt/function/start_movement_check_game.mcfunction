@@ -28,6 +28,7 @@ gamemode survival @a[team=hunters]
 
 function manhunt:player_reset
 
-
-
-
+#make sure hunters dont push runner 
+execute at @a[team=runners,limit=1] run tp @a[team=hunters] ^ ^5 ^ facing entity @a[team=runners,limit=1]
+#make sure runners dont push each other
+team modify runners collisionRule never

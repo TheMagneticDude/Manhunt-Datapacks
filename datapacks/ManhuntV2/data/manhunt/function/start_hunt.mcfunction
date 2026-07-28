@@ -15,3 +15,6 @@ scoreboard players set Temp manhunt_enabled 2
 #clear effects
 effect clear @a[tag=ManhuntPlayer]
 execute in minecraft:manhunt run time set day
+
+#allow runners to collide with each other again
+team modify runners collisionRule always
