@@ -18,3 +18,5 @@ execute in minecraft:manhunt run time set day
 
 #allow runners to collide with each other again
 team modify runners collisionRule always
+
+title @a[tag=ManhuntPlayer] title {"text":"Runner has started!","bold":true,"color":"gold"}
