@@ -11,5 +11,6 @@ gamemode adventure @s
 
 team leave @s
 
-
+effect give @s minecraft:resistance 1 255 true
+effect give @s minecraft:regeneration 1 255 true
 tellraw @s {"text":"Teleporting to the lobby...","color":"aqua"}
