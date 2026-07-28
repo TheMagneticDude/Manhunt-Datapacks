@@ -1,35 +1,5 @@
-scoreboard players reset @a manhunt_x_o
-scoreboard players reset @a manhunt_y_o
-scoreboard players reset @a manhunt_z_o
+#run normal start 
+execute if score GameStart manhunt_runner_move_start matches 0 run execute run function manhunt:start_gane
+#run movement check game
+execute if score GameStart manhunt_runner_move_start matches 1 run execute run function manhunt:start_movement_check_game
 
-scoreboard players reset @a manhunt_x_n
-scoreboard players reset @a manhunt_y_n
-scoreboard players reset @a manhunt_z_n
-
-
-tag @e remove manhunt_died
-tag @e remove manhunt_previous
-
-tag @e remove manhunt_true_runner
-tag @e remove manhunt_fake_runner
-execute as @e[team=runners] run tag @s add manhunt_true_runner
-
-scoreboard players set Temp manhunt_p_left 0
-execute as @a[team=runners] run scoreboard players add Temp manhunt_p_left 1
-
-scoreboard players set Temp manhunt_enabled 1
-scoreboard players set Temp manhunt_end 10
-
-gamemode survival @a[team=runners]
-gamemode survival @a[team=hunters]
-
-
-function manhunt:player_reset
-
-scoreboard players operation Starts: manhunt_display = Temp manhunt_lead
-scoreboard objectives setdisplay sidebar manhunt_display
-
-
-
-#setup trigger function
-function manhunt:setup

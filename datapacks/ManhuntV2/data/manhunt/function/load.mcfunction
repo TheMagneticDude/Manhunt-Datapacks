@@ -35,6 +35,7 @@ scoreboard objectives add manhunt_dst dummy
 scoreboard objectives add manhunt_min_dst dummy
 
 scoreboard objectives add manhunt_infection_mode dummy
+scoreboard objectives add manhunt_runner_move_start dummy
 
 execute unless score Temp manhunt_lead matches -2147483647.. run scoreboard players set Temp manhunt_lead 45
 
@@ -48,5 +49,12 @@ execute unless score Temp manhunt_prev matches -2147483647.. run function manhun
 scoreboard objectives add lobby trigger
 
 scoreboard objectives add tracker_count dummy
+
+#movement check scoreboard
+scoreboard objectives add walk minecraft.custom:minecraft.walk_one_cm
+scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add crouch minecraft.custom:minecraft.crouch_one_cm
+
+
 
 tellraw @a {"text":"Buckeye Manhunt 26.2 Loaded","bold":true,"color":"gold"}
