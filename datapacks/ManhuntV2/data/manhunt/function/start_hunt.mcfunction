@@ -19,4 +19,4 @@ execute in minecraft:manhunt run time set day
 #allow runners to collide with each other again
 team modify runners collisionRule always
 
-title @a[tag=ManhuntPlayer] title {"text":"Runner has started!","bold":true,"color":"gold"}
+execute if score GameStart manhunt_runner_move_start matches 0 run title @a[tag=ManhuntPlayer] title {"text":"Hunt has started!","bold":true,"color":"gold"}

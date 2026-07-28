@@ -19,3 +19,4 @@ scoreboard players set @a[scores={sprint=1..}] sprint 0
 execute as @a[scores={crouch=1..},team=runners] run function manhunt:start_hunt
 scoreboard players set @a[scores={crouch=1..}] crouch 0
 
+title @a[tag=ManhuntPlayer] title {"text":"Runner has started!","bold":true,"color":"gold"}
