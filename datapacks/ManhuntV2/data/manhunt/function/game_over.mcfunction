@@ -5,7 +5,7 @@ scoreboard players set Temp manhunt_enabled 0
 scoreboard players set Starts: manhunt_display 0
 
 execute in minecraft:overworld run tp @a[tag=ManhuntPlayer] 9.5 -28 6.6
-execute in minecraft:overworld run spawnpoint @a[tag=ManhuntPlayer] 9.5 -28 6.6
+execute in minecraft:overworld run spawnpoint @a[tag=ManhuntPlayer] 9 -28 6
 
 gamemode adventure @a[tag=ManhuntPlayer]
 
