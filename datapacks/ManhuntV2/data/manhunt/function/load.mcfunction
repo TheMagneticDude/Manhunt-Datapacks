@@ -36,6 +36,8 @@ scoreboard objectives add manhunt_min_dst dummy
 
 scoreboard objectives add manhunt_infection_mode dummy
 scoreboard objectives add manhunt_runner_move_start dummy
+scoreboard objectives add manhunt_game_preview dummy
+
 
 execute unless score Temp manhunt_lead matches -2147483647.. run scoreboard players set Temp manhunt_lead 45
 
