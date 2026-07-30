@@ -16,8 +16,9 @@ data modify storage mv_seeder:main temp_seeds set from storage mv_seeder:main se
 # 6. Loop to drop elements from the front of the array until our random index becomes 0
 function seedlist:pop_loop
 
-# 7. The first item remaining in the temp array is now our chosen seed
-data modify storage mv_seeder:main current_seed set from storage mv_seeder:main temp_seeds[0]
+# 7. Grab the first string from our remaining temp array and wrap it inside a compound object
+data modify storage mv_seeder:main execution_payload.seed_text set from storage mv_seeder:main temp_seeds[0]
 
-# 8. Run the final multiverse command macro
-function seedlist:execute_regen with storage mv_seeder:main current_seed
+# 8. Run the macro by passing the compound object
+function seedlist:execute_regen with storage mv_seeder:main execution_payload
+
