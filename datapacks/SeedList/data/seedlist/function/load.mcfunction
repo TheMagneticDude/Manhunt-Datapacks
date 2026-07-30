@@ -1,4 +1,4 @@
-/scoreboard objectives add mv_seeder_vars dummy
+scoreboard objectives add mv_seeder_vars dummy
 
 #Initialize storage array containing custom seeds
 
