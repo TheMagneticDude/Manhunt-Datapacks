@@ -29,11 +29,11 @@ gamemode spectator @a[team=dead,gamemode=!spectator]
 
 #force survival even on rejoin
 
-/execute as @a[team=runners] if dimension minecraft:manhunt run gamemode survival @s
-/execute as @a[team=hunters] if dimension minecraft:manhunt run gamemode survival @s
+execute as @a[team=runners] if dimension minecraft:manhunt run gamemode survival @s
+execute as @a[team=hunters] if dimension minecraft:manhunt run gamemode survival @s
 
-/execute as @a[team=runners] if dimension minecraft:manhunt_nether run gamemode survival @s
-/execute as @a[team=hunters] if dimension minecraft:manhunt_nether run gamemode survival @s
+execute as @a[team=runners] if dimension minecraft:manhunt_nether run gamemode survival @s
+execute as @a[team=hunters] if dimension minecraft:manhunt_nether run gamemode survival @s
 
-/execute as @a[team=runners] if dimension minecraft:manhunt_the_end run gamemode survival @s
-/execute as @a[team=hunters] if dimension minecraft:manhunt_the_end run gamemode survival @s
+execute as @a[team=runners] if dimension minecraft:manhunt_the_end run gamemode survival @s
+execute as @a[team=hunters] if dimension minecraft:manhunt_the_end run gamemode survival @s
