@@ -39,6 +39,8 @@ scoreboard players set @a[scores={sprint=1..}] sprint 0
 scoreboard players set @a[scores={crouch=1..}] crouch 0
 #give runners 20 seconds of slowness on game start
 effect give @a[team=runners] minecraft:slowness 10 255 true
+#prevent runner from dying before game starts
+effect give @a[team=runners] minecraft:resistance infinite 255 true
 
 
 scoreboard players set Temp manhunt_enabled 3
