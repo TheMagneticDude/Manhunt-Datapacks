@@ -2,7 +2,8 @@ scoreboard objectives add mv_seeder_vars dummy
 
 #Initialize storage array containing custom seeds
 
-data modify storage mv_seeder:main seeds set value ["65653257",
+data modify storage mv_seeder:main seeds set value [
+"65653257",
 "65582617",
 "65553114",
 "65539933",
@@ -2438,6 +2439,7 @@ data modify storage mv_seeder:main seeds set value ["65653257",
 "66988",
 "61478",
 "58553",
-"55901"]
+"55901"
+]
 
 tellraw @a {"text":"Seedlist Loaded","bold":true,"color":"green"}
