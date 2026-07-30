@@ -11,6 +11,11 @@ gamemode adventure @s
 
 team leave @s
 
+attribute @s minecraft:jump_strength base reset
+attribute @s minecraft:movement_speed base reset
+attribute @s minecraft:block_break_speed base reset
+attribute @s minecraft:knockback_resistance base reset
+
 effect give @s minecraft:resistance 1 255 true
 effect give @s minecraft:regeneration 1 255 true
 effect give @s minecraft:saturation 1 255 true
