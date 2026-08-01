@@ -6,7 +6,6 @@ scoreboard objectives add manhunt_rid dummy
 scoreboard objectives add manhunt_tid dummy
 
 scoreboard objectives add manhunt_ticks dummy
-scoreboard objectives add manhunt_seconds dummy
 
 
 scoreboard objectives add manhunt_enabled dummy
