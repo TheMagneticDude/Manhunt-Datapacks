@@ -16,6 +16,8 @@ scoreboard players operation Ends: manhunt_display = Temp manhunt_post_game_time
 scoreboard players reset Starts: manhunt_display
 
 tellraw @a[tag=ManhuntPlayer] {"text":"Game ends when timer expires!","bold":true,"color":"red"}
+tellraw @a[tag=ManhuntPlayer] {"text":"To return to lobby early run: /trigger lobby","bold":true,"color":"gold"}
+
 
 #set everyone to spectator
 execute as @a[tag=ManhuntPlayer] run team join dead
