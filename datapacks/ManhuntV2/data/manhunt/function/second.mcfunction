@@ -1,4 +1,3 @@
-scoreboard players add Temp manhunt_seconds 1
 
 execute as @e[team=runners,tag=!manhunt_true_runner,tag=!manhunt_fake_runner] run function manhunt:handle_fake_runner
 
