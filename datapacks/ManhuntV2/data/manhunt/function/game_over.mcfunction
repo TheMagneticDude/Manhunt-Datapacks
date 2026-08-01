@@ -6,8 +6,14 @@ scoreboard players set Temp manhunt_enabled 32767
 
 
 scoreboard objectives setdisplay sidebar manhunt_display
+
+
+
 #set end time 
 scoreboard players operation Ends: manhunt_display = Temp manhunt_post_game_timer
+
+#hide Starts timer 
+scoreboard players reset Starts: manhunt_display
 
 tellraw @a[tag=ManhuntPlayer] {"text":"Game ends when timer expires!","bold":true,"color":"red"}
 
