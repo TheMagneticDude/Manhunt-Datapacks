@@ -21,7 +21,10 @@ tag @a[team=dead,tag=!ManhuntPlayer] add ManhuntPlayer
 execute as @a run execute unless entity @a[team=runners] run execute unless entity @a[team=hunters] run execute unless entity @a[team=dead] run tag @s remove ManhuntPlayer
 
 #set dead runners to spectator even upon rejoin
-gamemode spectator @a[team=dead,gamemode=!spectator]
+execute as @a[team=dead,gamemode=!spectator] at @s if dimension minecraft:manhunt run gamemode spectator @s
+execute as @a[team=dead,gamemode=!spectator] at @s if dimension minecraft:manhunt_nether run gamemode spectator @s
+execute as @a[team=dead,gamemode=!spectator] at @s if dimension minecraft:manhunt_the_end run gamemode spectator @s
+
 
 #lead timer value 
 #read scoreboard lead value and store into macro
