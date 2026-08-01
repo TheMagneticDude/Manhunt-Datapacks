@@ -11,3 +11,5 @@ scoreboard players operation Ends: manhunt_display = Temp manhunt_lead
 
 tellraw @a[tag=ManhuntPlayer] {"text":"Game ends when timer expires!","bold":true,"color":"red"}
 
+#set everyone to spectator
+execute as @a[tag=ManhuntPlayer] run team join dead
