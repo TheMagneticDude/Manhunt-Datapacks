@@ -41,11 +41,11 @@ execute as @a[team=hunters] run attribute @s minecraft:knockback_resistance base
 
 #force survival even on rejoin
 
-execute as @a[team=runners] if dimension minecraft:manhunt run gamemode survival @s
-execute as @a[team=hunters] if dimension minecraft:manhunt run gamemode survival @s
+execute at @a[team=runners] if dimension minecraft:manhunt run gamemode survival @s
+execute at @a[team=hunters] if dimension minecraft:manhunt run gamemode survival @s
 
-execute as @a[team=runners] if dimension minecraft:manhunt_nether run gamemode survival @s
-execute as @a[team=hunters] if dimension minecraft:manhunt_nether run gamemode survival @s
+execute at @a[team=runners] if dimension minecraft:manhunt_nether run gamemode survival @s
+execute at @a[team=hunters] if dimension minecraft:manhunt_nether run gamemode survival @s
 
-execute as @a[team=runners] if dimension minecraft:manhunt_the_end run gamemode survival @s
-execute as @a[team=hunters] if dimension minecraft:manhunt_the_end run gamemode survival @s
+execute at @a[team=runners] if dimension minecraft:manhunt_the_end run gamemode survival @s
+execute at @a[team=hunters] if dimension minecraft:manhunt_the_end run gamemode survival @s
