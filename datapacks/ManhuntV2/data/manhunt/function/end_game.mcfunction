@@ -12,3 +12,9 @@ gamemode adventure @a[tag=ManhuntPlayer]
 function manhunt:player_reset
 team leave @a[tag=ManhuntPlayer]
 scoreboard objectives setdisplay sidebar victories
+
+
+
+#disable stargate
+function stargate:a/default/play_anim
+function stargate:_/default/stop_anim
