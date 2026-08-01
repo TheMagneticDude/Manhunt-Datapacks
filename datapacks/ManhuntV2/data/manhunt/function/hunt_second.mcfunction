@@ -39,5 +39,7 @@ execute as @a[team=hunters] run attribute @s minecraft:movement_speed base reset
 execute as @a[team=hunters] run attribute @s minecraft:block_break_speed base reset
 execute as @a[team=hunters] run attribute @s minecraft:knockback_resistance base reset
 
+#start timer for after game over 
+execute if score Temp manhunt_enabled matches 32767 run 
 
 

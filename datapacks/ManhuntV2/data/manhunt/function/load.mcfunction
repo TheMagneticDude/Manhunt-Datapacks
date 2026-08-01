@@ -6,6 +6,9 @@ scoreboard objectives add manhunt_rid dummy
 scoreboard objectives add manhunt_tid dummy
 
 scoreboard objectives add manhunt_ticks dummy
+scoreboard objectives add manhunt_seconds dummy
+
+
 scoreboard objectives add manhunt_enabled dummy
 scoreboard objectives add manhunt_end dummy
 
@@ -14,6 +17,7 @@ scoreboard objectives modify manhunt_display displayname ""
 
 scoreboard objectives add manhunt_deaths deathCount
 scoreboard objectives add manhunt_lead dummy
+scoreboard objectives add manhunt_post_game_timer dummy
 
 scoreboard objectives add manhunt_x dummy
 scoreboard objectives add manhunt_y dummy

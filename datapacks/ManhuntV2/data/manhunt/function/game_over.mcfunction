@@ -1,18 +1,13 @@
 clear @a[tag=ManhuntPlayer] minecraft:compass[minecraft:custom_data={Manhunt_tracker:1b}]
 title @a[tag=ManhuntPlayer] title {"text":"Game over","bold":true,"color":"gold"}
 
-scoreboard players set Temp manhunt_enabled 0
-scoreboard players set Starts: manhunt_display 0
+#16 bit integer limit for representing the limbo state right after game over and before people get teleported
+scoreboard players set Temp manhunt_enabled 32767
 
-execute in minecraft:overworld run tp @a[tag=ManhuntPlayer] 9.5 -28 6.6
-execute in minecraft:overworld run spawnpoint @a[tag=ManhuntPlayer] 9 -28 6
 
-gamemode adventure @a[tag=ManhuntPlayer]
+scoreboard objectives setdisplay sidebar manhunt_display
+#set end time 
+scoreboard players operation Ends: manhunt_display = Temp manhunt_lead
 
-function manhunt:player_reset
-team leave @a[tag=ManhuntPlayer]
-scoreboard objectives setdisplay sidebar victories
+tellraw @a[tag=ManhuntPlayer] {"text":"Game ends when timer expires!","bold":true,"color":"red"}
 
-#disable stargate
-function stargate:a/default/play_anim
-function stargate:_/default/stop_anim

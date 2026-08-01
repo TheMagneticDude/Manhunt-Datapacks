@@ -28,11 +28,11 @@ gamemode spectator @a[team=dead,gamemode=!spectator]
 #execute store result storage manhunt:vars LeadTime int 1 run scoreboard players get Temp manhunt_lead
 
 #force survival even on rejoin
-execute as @a[team=runners,tag=!Operator] at @s if dimension minecraft:manhunt run gamemode survival @s
-execute as @a[team=hunters,tag=!Operator] at @s if dimension minecraft:manhunt run gamemode survival @s
+execute as @a[team=runners] at @s if dimension minecraft:manhunt run gamemode survival @s
+execute as @a[team=hunters] at @s if dimension minecraft:manhunt run gamemode survival @s
 
-execute as @a[team=runners,tag=!Operator] at @s if dimension minecraft:manhunt_nether run gamemode survival @s
-execute as @a[team=hunters,tag=!Operator] at @s if dimension minecraft:manhunt_nether run gamemode survival @s
+execute as @a[team=runners] at @s if dimension minecraft:manhunt_nether run gamemode survival @s
+execute as @a[team=hunters] at @s if dimension minecraft:manhunt_nether run gamemode survival @s
 
-execute as @a[team=runners,tag=!Operator] at @s if dimension minecraft:manhunt_the_end run gamemode survival @s
-execute as @a[team=hunters,tag=!Operator] at @s if dimension minecraft:manhunt_the_end run gamemode survival @s
+execute as @a[team=runners] at @s if dimension minecraft:manhunt_the_end run gamemode survival @s
+execute as @a[team=hunters] at @s if dimension minecraft:manhunt_the_end run gamemode survival @s
