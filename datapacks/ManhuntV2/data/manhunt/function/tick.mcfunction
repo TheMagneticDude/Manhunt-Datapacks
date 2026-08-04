@@ -12,7 +12,7 @@ execute if score Starts: manhunt_display matches 1.. run clear @a[team=hunters]
 function manhunt:check_trigger
 
 
-#player tag
+#give player tag
 tag @a[team=runners,tag=!ManhuntPlayer] add ManhuntPlayer
 tag @a[team=hunters,tag=!ManhuntPlayer] add ManhuntPlayer
 tag @a[team=dead,tag=!ManhuntPlayer] add ManhuntPlayer
@@ -31,11 +31,13 @@ execute as @a[team=dead,gamemode=!spectator] at @s if dimension minecraft:manhun
 #execute store result storage manhunt:vars LeadTime int 1 run scoreboard players get Temp manhunt_lead
 
 #force survival even on rejoin
-execute as @a[team=runners] at @s if dimension minecraft:manhunt run gamemode survival @s
-execute as @a[team=hunters] at @s if dimension minecraft:manhunt run gamemode survival @s
+execute as @a[team=runners] at @s if dimension minecraft:manhunt if score temp manhunt_enabled matches 1.. run gamemode survival @s
+execute as @a[team=hunters] at @s if dimension minecraft:manhunt if score temp manhunt_enabled matches 1.. run run gamemode survival @s
 
-execute as @a[team=runners] at @s if dimension minecraft:manhunt_nether run gamemode survival @s
-execute as @a[team=hunters] at @s if dimension minecraft:manhunt_nether run gamemode survival @s
+execute as @a[team=runners] at @s if dimension minecraft:manhunt_nether if score temp manhunt_enabled matches 1.. run run gamemode survival @s
+execute as @a[team=hunters] at @s if dimension minecraft:manhunt_nether if score temp manhunt_enabled matches 1.. run run gamemode survival @s
 
-execute as @a[team=runners] at @s if dimension minecraft:manhunt_the_end run gamemode survival @s
-execute as @a[team=hunters] at @s if dimension minecraft:manhunt_the_end run gamemode survival @s
+execute as @a[team=runners] at @s if dimension minecraft:manhunt_the_end if score temp manhunt_enabled matches 1.. run run gamemode survival @s
+execute as @a[team=hunters] at @s if dimension minecraft:manhunt_the_end if score temp manhunt_enabled matches 1.. run run gamemode survival @s
+
+
