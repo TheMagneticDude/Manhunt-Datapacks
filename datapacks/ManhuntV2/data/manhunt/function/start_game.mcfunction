@@ -2,8 +2,8 @@
 execute in minecraft:manhunt run time set day
 
 #teleport players to manhunt world
-function manhunt:run_cmd {cmd: "execute as @a[team=runners] run mv tp @a manhunt"}
-function manhunt:run_cmd {cmd: "execute as @a[team=hunters] run mv tp @a manhunt"}
+function manhunt:run_cmd {cmd: "execute as @a[tag=ManhuntPlayer] run mv tp manhunt"}
+
 
 #run normal start 
 execute if score GameStart manhunt_runner_move_start matches 0 run execute run function manhunt:start_default_game

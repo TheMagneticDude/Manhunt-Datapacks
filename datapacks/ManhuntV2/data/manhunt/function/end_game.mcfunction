@@ -14,6 +14,12 @@ team leave @a[tag=ManhuntPlayer]
 scoreboard objectives setdisplay sidebar victories
 
 
+effect clear @a[tag=ManhuntPlayer]
+execute as @a[tag=ManhuntPlayer] run attribute @s minecraft:jump_strength base reset
+execute as @a[tag=ManhuntPlayer] run attribute @s minecraft:movement_speed base reset
+execute as @a[tag=ManhuntPlayer] run attribute @s minecraft:block_break_speed base reset
+execute as @a[tag=ManhuntPlayer] run attribute @s minecraft:knockback_resistance base reset
+
 
 #disable stargate
 function stargate:a/default/play_anim
